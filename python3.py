@@ -1,5 +1,20 @@
-#Write a Python program to print the current date and time
-import datetime
-
-x = datetime.datetime.now()
-print(x)
+def count_chars(str):
+     upper_ctr, lower_ctr, number_ctr, special_ctr = 0, 0, 0, 0
+     for i in range(len(str)):
+          if str[i] >= 'A' and str[i] <= 'Z': 
+              upper_ctr += 1
+          elif str[i] >= 'a' and str[i] <= 'z':
+              lower_ctr += 1
+          elif str[i] >= '0' and str[i] <= '9':
+              number_ctr += 1
+          else:
+              special_ctr += 1
+     return upper_ctr, lower_ctr, number_ctr, special_ctr
+           
+str =input("enter the data")
+print("Original Substrings:",str)
+u, l, n, s = count_chars(str)
+print('\nUpper case characters: ',u)
+print('\nLower case characters: ',l)
+print('\nNumber case: ',n)
+print('\nSpecial case characters: ',s)

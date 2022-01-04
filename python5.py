@@ -1,12 +1,11 @@
-'''6.Write a Python program to print the following pattern
-1
-1 2
-1 2 3
-1 2 3 4
-1 2 3 4 5'''
-for i in range(7):
-    
-    for j in range(1,i):
-        print(j, end=' ')
-    
-    print('')
+t = "English=78 Science=83 Math=68 History=65"
+
+st = t.split()
+
+sum = 0
+for i in range(4):
+    print(st[i])
+    sub = st[i]
+    sum = sum + int(sub[-2:])
+print("sum : ", sum)
+print("avg : ", sum/4)
